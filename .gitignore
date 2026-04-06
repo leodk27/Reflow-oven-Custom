@@ -1,43 +1,52 @@
-# =========================
-# KiCad backups
-# =========================
-*-backups/
-KICAD reflow-oven-backups/
-Reflow oven-backups/
+# For PCBs designed using KiCad: https://www.kicad.org/
+# Format documentation: https://kicad.org/help/file-formats/
 
-# =========================
-# KiCad local machine config
-# =========================
-*.kicad_prl
-fp-info-cache
-*.lck
+# Temporary files
+*.000
+*.bak
+*.bck
+*.kicad_pcb-bak
+*.kicad_sch-bak
+*-backups
+*-cache*
+*-bak
+*-bak*
+*~
 ~*
 _autosave-*
+\#auto_saved_files\#
+#auto_saved_files#
+*.tmp
+*-save.pro
+*-save.kicad_pcb
+fp-info-cache
+~*.lck
+*.lck
 
-# =========================
-# Routing / temp files
-# =========================
+# Netlist files (exported from Eeschema)
+*.net
+
+# Autorouter files (exported from Pcbnew)
 *.dsn
 *.ses
 freerouting.*
 
-# =========================
+# Exported BOM files
+*.xml
+*.csv
+
+# Archived Backups (KiCad 6.0)
+**/*-backups/*.zip
+KICAD reflow-oven-backups/
+Reflow oven-backups/
+
+# Local project settings
+*.kicad_prl
+
 # Tool-generated configs
-# =========================
 fabrication-toolkit-options.json
 
-# =========================
-# Autosave / temp
-# =========================
-*.bak
-*.bck
-*~
-_autosave-*
-*.tmp
-
-# =========================
 # Outputs (if you add later)
-# =========================
 outputs/
 gerbers/
 plots/
@@ -49,10 +58,7 @@ production/
 *.drill
 *.rpt
 *.pos
-*.csv
 
-# =========================
 # OS junk
-# =========================
 .DS_Store
 Thumbs.db
